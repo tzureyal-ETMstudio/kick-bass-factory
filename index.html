@@ -1,0 +1,1597 @@
+ <!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kick & Bass Factory — דף מכירה</title>
+  <meta name="description" content="תשלטו בקיק ובבס, תגרמו לטראקים שלכם להישמע כמו של הגדולים — בשיטה שיטתית וברורה." />
+  <meta property="og:title" content="Kick & Bass Factory" />
+  <meta property="og:description" content="שיטה אחת מדידה לקיק ובס — בלי ניחושים ובלי בלבול." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --bg-alt:#f5f5f7;
+      --bg-dark:#1a1a2e;
+      --bg-dark-alt:#16213e;
+      --bg-gradient:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);
+      --text:#2d2d2d;
+      --text-light:#555555;
+      --text-on-dark:#ffffff;
+      --text-on-dark-muted:rgba(255,255,255,.85);
+      --heading:#000000;
+      --accent:#00B4D8;
+      --accent2:#f5c400;
+      --stroke:#e5e7eb;
+      --stroke-dark:rgba(255,255,255,.12);
+      --radius:0.5rem;
+      --max-width:1200px;
+      --content-width:800px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    
+    body{
+      font-family:Arial,'Assistant',sans-serif;
+      color:var(--text);
+      background-color:var(--bg);
+      font-size:1rem;
+      line-height:1.7;
+    }
+
+    /* Container */
+    .container{
+      width:95%;
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:0 1rem;
+    }
+
+    /* Typography */
+    h1{
+      font-size:1.75rem;
+      font-weight:700;
+      line-height:1.3;
+      color:var(--heading);
+      margin-bottom:1.5rem;
+    }
+    h2{
+      font-size:1.5rem;
+      font-weight:700;
+      line-height:1.35;
+      color:var(--heading);
+      margin-bottom:1.25rem;
+    }
+    h3{
+      font-size:1.25rem;
+      font-weight:600;
+      line-height:1.4;
+      color:var(--heading);
+      margin-bottom:1rem;
+    }
+    p{
+      font-size:1rem;
+      font-weight:400;
+      line-height:1.7;
+      margin-bottom:1rem;
+      color:var(--text);
+    }
+    .subp{
+      color:#444444;
+      margin-bottom:1.5rem;
+    }
+
+    /* Highlights */
+    .hl-bold{font-weight:700;color:var(--heading)}
+    .band--dark .hl-bold{color:#ffffff}
+    .hl-underline{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:0.25rem;text-decoration-thickness:2px}
+    .hl-marker{background:linear-gradient(180deg,transparent 60%,rgba(245,196,0,.4) 60%);padding:0 0.125rem}
+
+    /* Sections */
+    section{padding:3rem 0;width:100%}
+    .band{border-bottom:1px solid var(--stroke);width:100%}
+    .band--alt{background:var(--bg-alt);width:100%}
+    .band--dark{
+      background:var(--bg-gradient);
+      color:var(--text-on-dark);
+      border-bottom:none;
+      width:100%;
+    }
+    .band--dark h2,.band--dark h3{color:#ffffff}
+    .band--dark p,.band--dark .subp{color:rgba(255,255,255,.9)}
+    .band--dark .box-text{color:rgba(255,255,255,.9)}
+    .band--dark .box{
+      background:rgba(255,255,255,.08);
+      border-color:rgba(255,255,255,.15);
+    }
+    .band--dark .box p{color:rgba(255,255,255,.9)}
+    .band--dark .list li{border-color:rgba(255,255,255,.15);color:#ffffff}
+    .band--dark .muted{color:rgba(255,255,255,.8)}
+    .band--dark .callout{
+      background:rgba(0,180,216,.12);
+      border-color:var(--accent);
+    }
+    .band--dark .callout strong{color:var(--accent2)}
+    .band--dark .hl-marker{background:linear-gradient(180deg,transparent 60%,rgba(245,196,0,.5) 60%)}
+
+    /* Buttons - Touch Friendly 48px min */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:3rem;
+      font-size:1rem;
+      font-weight:700;
+      padding:0.875rem 1.75rem;
+      border:none;
+      border-radius:var(--radius);
+      background-color:var(--heading);
+      color:#fff;
+      cursor:pointer;
+      text-decoration:none;
+      transition:transform 0.15s,box-shadow 0.15s;
+      white-space:normal;
+      text-align:center;
+      touch-action:manipulation;
+      position:relative;
+      overflow:hidden;
+    }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 0.5rem 1.5rem rgba(0,0,0,.15)}
+    .btn:active{transform:translateY(0)}
+    
+    /* Shine Effect for CTA Buttons */
+    .btn-cta::before,
+    .btn-primary::before,
+    .btn-gold::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:-100%;
+      width:50%;
+      height:100%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);
+      animation:shine 3s infinite;
+    }
+    
+    @keyframes shine{
+      0%{left:-100%}
+      20%{left:100%}
+      100%{left:100%}
+    }
+    
+    .btn-primary{background:linear-gradient(135deg,#00B4D8,#0096b4);color:#fff;box-shadow:0 0.25rem 1rem rgba(0,180,216,.25)}
+    .btn-primary:hover{box-shadow:0 0.5rem 1.5rem rgba(0,180,216,.35)}
+    .btn-gold{background:linear-gradient(135deg,#f5c400,#e6b800);color:#000;box-shadow:0 0.25rem 1rem rgba(245,196,0,.25)}
+    .btn-gold:hover{box-shadow:0 0.5rem 1.5rem rgba(245,196,0,.35)}
+    .btn-ghost{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+    .btn-ghost:hover{background:var(--accent);color:#fff}
+    .btn-cta{
+      font-size:1.125rem;
+      padding:1rem 2rem;
+      width:100%;
+      max-width:25rem;
+      line-height:1.4;
+    }
+
+    /* Hero */
+    header.hero{padding:2.5rem 0 2rem;text-align:center}
+    .hero.band--dark .pill{
+      background:rgba(255,255,255,.1);
+      border-color:rgba(255,255,255,.2);
+      color:rgba(255,255,255,.95);
+    }
+    .hero.band--dark h1{color:#ffffff}
+    .hero.band--dark .micro{color:rgba(255,255,255,.9)}
+    .pill{
+      display:inline-block;
+      padding:0.625rem 1rem;
+      border-radius:999px;
+      border:1px solid var(--stroke);
+      background:var(--bg-alt);
+      font-weight:500;
+      font-size:0.875rem;
+      color:#444444;
+      margin-bottom:1.25rem;
+      line-height:1.5;
+    }
+    .hero-actions{
+      display:flex;
+      flex-direction:column;
+      gap:1rem;
+      align-items:center;
+      margin-top:2rem;
+    }
+    .micro{
+      margin-top:1.25rem;
+      color:#444444;
+      font-weight:500;
+      font-size:0.875rem;
+      line-height:1.6;
+    }
+
+    /* Images - Responsive */
+    img{
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+    .img-container{
+      width:95%;
+      max-width:25rem;
+      margin:0 auto;
+    }
+
+    /* Video */
+    .video-row{display:flex;justify-content:center;margin:1.5rem 0}
+    .video-embed{
+      position:relative;
+      width:95%;
+      max-width:25rem;
+      aspect-ratio:16/9;
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:0 0.25rem 1rem rgba(0,0,0,.1);
+    }
+    .video-embed iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+
+    /* Logo */
+    .logo-row{display:flex;justify-content:center;margin:0 0 1rem}
+    .course-logo{
+      width:70%;
+      max-width:11rem;
+      height:auto;
+    }
+
+    /* Callout */
+    .callout{
+      background:var(--bg-alt);
+      border-right:4px solid var(--accent);
+      padding:1.25rem;
+      margin:1.5rem 0;
+      font-weight:500;
+      line-height:1.7;
+      border-radius:var(--radius);
+    }
+    .callout strong{color:var(--accent)}
+
+    /* Boxes */
+    .box{
+      background:var(--bg);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      padding:1.25rem;
+      margin-bottom:1rem;
+    }
+    .box p{margin:0;color:#444444;line-height:1.7}
+    .box-text{color:#444444;font-weight:400;line-height:1.7}
+    .band--alt .box{background:#fff}
+    
+    /* Bonus Cards Hover Effect */
+    .bonus-card{
+      transition:transform 0.2s ease,box-shadow 0.2s ease;
+      cursor:default;
+    }
+    .bonus-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 0.5rem 1.5rem rgba(0,180,216,.25);
+    }
+    
+    .sep{height:1px;background:var(--stroke);margin:1.25rem 0}
+
+    /* Lists */
+    .list{list-style:none}
+    .list li{
+      padding:0.75rem 0;
+      border-bottom:1px solid var(--stroke);
+      font-weight:500;
+      font-size:1rem;
+      line-height:1.6;
+      color:#2d2d2d;
+    }
+    .list li:last-child{border-bottom:none}
+    .muted{color:#555555;font-weight:400;display:block;margin-top:0.25rem;font-size:0.9375rem}
+
+    /* Grid - Mobile First */
+    .grid{display:flex;flex-direction:column;gap:1rem}
+
+    /* Offer */
+    .offer{
+      background:var(--heading);
+      color:#fff;
+      border-radius:var(--radius);
+      padding:2rem 1.25rem;
+      text-align:center;
+    }
+    .offer .price-title{font-size:0.875rem;text-transform:uppercase;letter-spacing:0.125rem;color:rgba(255,255,255,.85)}
+    .offer .price{font-size:2.5rem;font-weight:700;margin:1rem 0;color:#ffffff}
+    .offer .paynote{color:rgba(255,255,255,.9);font-weight:500;font-size:0.9375rem;line-height:1.6}
+    .offer .bullets{text-align:right;margin:1.5rem 0;list-style:none}
+    .offer .bullets li{padding:0.5rem 0;display:flex;gap:0.625rem;align-items:flex-start;font-weight:500;font-size:0.9375rem;line-height:1.5;color:#ffffff}
+    .offer .check{color:var(--accent2);flex-shrink:0}
+    .offer .sep{background:rgba(255,255,255,.2)}
+    .offer .btn-primary{background:linear-gradient(135deg,#00B4D8,#0096b4);box-shadow:0 0.25rem 1rem rgba(0,180,216,.4)}
+    .offer .btn-gold{background:linear-gradient(135deg,#f5c400,#e6b800);color:#000}
+
+    /* Scrollers */
+    .hscroll-wrap{margin-top:1rem}
+    .hscroll{
+      display:flex;
+      gap:1rem;
+      overflow-x:auto;
+      padding:0.625rem 0 1rem;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+    }
+    .hscroll::-webkit-scrollbar{height:0.375rem}
+    .hscroll::-webkit-scrollbar-track{background:var(--stroke);border-radius:999px}
+    .hscroll::-webkit-scrollbar-thumb{background:var(--accent);border-radius:999px}
+    .scroll-hint{text-align:center;color:#555555;font-size:0.875rem;margin-top:0.5rem}
+
+    .label-card{
+      scroll-snap-align:start;
+      min-width:14rem;
+      height:7rem;
+      border-radius:var(--radius);
+      border:1px solid var(--stroke);
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      flex-shrink:0;
+      padding:0.5rem;
+    }
+    .label-card img{width:90%;height:85%;object-fit:contain}
+    
+    .artist-card{
+      scroll-snap-align:start;
+      min-width:14rem;
+      height:15rem;
+      border-radius:var(--radius);
+      border:1px solid var(--stroke);
+      background:#fff;
+      overflow:hidden;
+      flex-shrink:0;
+    }
+    .artist-card .img{height:100%;display:flex;align-items:center;justify-content:center;padding:0.5rem}
+    .artist-card img{width:100%;height:100%;object-fit:contain}
+
+    /* Testimonials */
+    .scroller{
+      display:flex;
+      gap:1rem;
+      overflow-x:auto;
+      padding:1rem 0;
+      scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;
+    }
+    .tcard{
+      min-width:85%;
+      max-width:20rem;
+      scroll-snap-align:start;
+      background:var(--bg);
+      border:1px solid var(--stroke);
+      border-radius:var(--radius);
+      padding:1.25rem;
+      flex-shrink:0;
+    }
+    .band--dark .tcard{
+      background:rgba(255,255,255,.08);
+      border-color:rgba(255,255,255,.15);
+    }
+    .tquote{font-size:1rem;font-weight:500;margin:0 0 1rem;font-style:italic;line-height:1.7;color:#2d2d2d}
+    .band--dark .tquote{color:#ffffff}
+    .tmeta{
+      color:#444444;
+      font-weight:600;
+      font-size:0.9375rem;
+      display:flex;
+      align-items:center;
+      gap:0.75rem;
+    }
+    .band--dark .tmeta{color:var(--accent2)}
+    .tmeta-img{
+      width:4rem;
+      height:4rem;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid var(--accent);
+      flex-shrink:0;
+    }
+
+    /* Video Grid */
+    .video-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:1rem;
+      margin-top:1.5rem;
+    }
+    .video-card{border-radius:var(--radius);overflow:hidden;box-shadow:0 0.25rem 1rem rgba(0,0,0,.08)}
+    .video-embed.portrait{
+      aspect-ratio:9/16;
+      max-height:70vh;
+      max-width:100%;
+    }
+
+    /* Guarantee */
+    .guarantee-section{text-align:center;padding:2rem 0}
+    .guarantee-row{display:flex;justify-content:center;margin-bottom:1.5rem}
+    .guarantee-badge{width:12rem;height:auto}
+    .guarantee-title{font-size:1.375rem;font-weight:700;margin:0 0 1rem;color:#000000}
+    .guarantee-text{color:#444444;font-size:1rem;max-width:100%;margin:0 auto;line-height:1.7}
+
+    /* FAQ */
+    .faq{max-width:100%}
+    details{border-bottom:1px solid var(--stroke);padding:1.25rem 0}
+    summary{
+      cursor:pointer;
+      font-weight:600;
+      font-size:1rem;
+      list-style:none;
+      line-height:1.5;
+      padding-left:1.5rem;
+      position:relative;
+      min-height:3rem;
+      display:flex;
+      align-items:center;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary::before{content:"+";color:var(--accent);position:absolute;right:0;font-size:1.25rem;font-weight:700}
+    details[open] summary::before{content:"−"}
+    details p{margin:1rem 0 0;color:#444444;line-height:1.7}
+    .band--dark details{border-color:rgba(255,255,255,.15)}
+    .band--dark summary{color:#ffffff}
+    .band--dark details p{color:rgba(255,255,255,.9)}
+
+    /* Module Cards */
+    .module-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:1rem;
+      margin:2rem 0;
+    }
+    .module-card{
+      background:linear-gradient(135deg,#00B4D8,#0096b4);
+      border-radius:var(--radius);
+      padding:2rem 1.5rem;
+      text-align:center;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 0.25rem 1rem rgba(0,180,216,.25);
+      transition:transform 0.2s,box-shadow 0.2s;
+    }
+    .module-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 0.5rem 1.5rem rgba(0,180,216,.35);
+    }
+    .module-number{
+      font-size:3rem;
+      font-weight:700;
+      opacity:0.15;
+      position:absolute;
+      top:-0.5rem;
+      right:1rem;
+      line-height:1;
+    }
+    .module-icon{
+      font-size:2.5rem;
+      margin-bottom:0.75rem;
+      display:block;
+    }
+    .module-title{
+      font-size:1.25rem;
+      font-weight:700;
+      margin-bottom:0.5rem;
+      color:#fff;
+    }
+    .module-subtitle{
+      font-size:0.9375rem;
+      opacity:0.9;
+      margin-bottom:1rem;
+    }
+    .module-meta{
+      display:flex;
+      justify-content:center;
+      gap:1.5rem;
+      font-size:0.875rem;
+      opacity:0.85;
+      flex-wrap:wrap;
+    }
+    .module-meta span{
+      display:flex;
+      align-items:center;
+      gap:0.375rem;
+    }
+
+    /* Modal/Popup */
+    .modal{
+      display:none;
+      position:fixed;
+      z-index:999;
+      left:0;
+      top:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.8);
+      overflow-y:auto;
+      padding:2rem 1rem;
+    }
+    .modal.active{display:flex;align-items:flex-start;justify-content:center}
+    .modal-content{
+      background:#fff;
+      border-radius:var(--radius);
+      max-width:50rem;
+      width:100%;
+      margin:2rem auto;
+      position:relative;
+      max-height:85vh;
+      overflow-y:auto;
+      box-shadow:0 1rem 3rem rgba(0,0,0,.3);
+    }
+    .modal-header{
+      padding:2rem 2rem 1rem;
+      border-bottom:2px solid var(--accent);
+      position:sticky;
+      top:0;
+      background:#fff;
+      z-index:10;
+    }
+    .modal-header h2{
+      margin:0;
+      color:var(--heading);
+    }
+    .modal-close{
+      position:absolute;
+      top:1.5rem;
+      left:1.5rem;
+      background:none;
+      border:none;
+      font-size:2rem;
+      cursor:pointer;
+      color:#666;
+      width:2.5rem;
+      height:2.5rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      transition:background 0.2s;
+    }
+    .modal-close:hover{background:var(--bg-alt)}
+    .modal-body{
+      padding:2rem;
+    }
+    .syllabus-section{
+      margin-bottom:2rem;
+    }
+    .syllabus-section h3{
+      color:var(--accent);
+      border-bottom:2px solid var(--accent);
+      padding-bottom:0.5rem;
+      margin-bottom:1rem;
+    }
+    .syllabus-list{
+      list-style:none;
+      padding:0;
+    }
+    .syllabus-list li{
+      padding:0.75rem 0;
+      border-bottom:1px solid var(--stroke);
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:1rem;
+    }
+    .syllabus-list li:last-child{border-bottom:none}
+    .lesson-name{
+      flex:1;
+      font-weight:500;
+      color:var(--text);
+    }
+    .lesson-time{
+      color:var(--text-light);
+      font-size:0.875rem;
+      white-space:nowrap;
+      font-family:monospace;
+    }
+    .syllabus-summary{
+      background:var(--bg-alt);
+      padding:1.5rem;
+      border-radius:var(--radius);
+      margin-top:2rem;
+    }
+    .syllabus-summary h4{
+      margin:0 0 1rem;
+      color:var(--heading);
+    }
+    .summary-stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));
+      gap:1rem;
+    }
+    .stat-item{
+      text-align:center;
+      padding:1rem;
+      background:#fff;
+      border-radius:var(--radius);
+    }
+    .stat-number{
+      font-size:2rem;
+      font-weight:700;
+      color:var(--accent);
+      display:block;
+    }
+    .stat-label{
+      font-size:0.875rem;
+      color:var(--text-light);
+    }
+
+    /* Footer */
+    footer{
+      padding:2.5rem 0;
+      background:var(--bg-dark);
+      color:rgba(255,255,255,.9);
+      border-top:none;
+    }
+    footer strong{color:#ffffff}
+    .footer-links{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem}
+    .footer-links a{
+      color:rgba(255,255,255,.9);
+      font-weight:500;
+      font-size:0.9375rem;
+      padding:0.5rem 0;
+      min-height:2.75rem;
+      display:flex;
+      align-items:center;
+    }
+    .footer-links a:hover{color:var(--accent)}
+
+    /* Sticky Mobile */
+    .sticky{
+      position:fixed;
+      bottom:0;
+      left:0;
+      right:0;
+      background:#fff;
+      border-top:2px solid var(--accent);
+      padding:0.75rem 1rem;
+      z-index:90;
+      box-shadow:0 -0.25rem 1rem rgba(0,0,0,.1);
+    }
+    .sticky .row{display:flex;gap:0.75rem;align-items:center;justify-content:space-between}
+    .sticky .mini{font-weight:600;font-size:0.875rem;line-height:1.4}
+    .sticky .btn{min-height:2.75rem;padding:0.625rem 1rem;font-size:0.9375rem}
+
+    .sr-only{position:absolute;left:-9999px}
+
+    /* ==================== */
+    /* MEDIA QUERIES        */
+    /* Mobile First         */
+    /* ==================== */
+
+    /* Tablet (768px+) */
+    @media(min-width:48rem){
+      :root{--max-width:900px}
+      
+      h1{font-size:2.25rem}
+      h2{font-size:1.875rem}
+      h3{font-size:1.375rem}
+      
+      section{padding:4rem 0}
+      header.hero{padding:3.5rem 0 2.5rem}
+      
+      .container{width:90%;padding:0 2rem}
+      
+      .img-container{max-width:700px}
+      .video-embed{max-width:700px}
+      .course-logo{max-width:12.5rem}
+      
+      .hero-actions{flex-direction:row;justify-content:center}
+      .btn-cta{width:auto;max-width:none}
+      
+      .grid{flex-direction:row;flex-wrap:wrap}
+      .grid>*{flex:1 1 calc(50% - 0.5rem);min-width:15rem}
+      
+      .video-grid{grid-template-columns:repeat(4,1fr)}
+      
+      .label-card{min-width:16rem;height:8rem}
+      .artist-card{min-width:16rem;height:17rem}
+      
+      .tcard{min-width:calc(50% - 0.5rem)}
+      
+      .module-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    /* Desktop (1024px+) */
+    @media(min-width:64rem){
+      :root{--max-width:1200px}
+      
+      h1{font-size:2.75rem}
+      h2{font-size:2.125rem}
+      h3{font-size:1.5rem}
+      
+      .container{width:85%;max-width:1200px}
+      
+      .img-container{max-width:900px}
+      .video-embed{max-width:900px}
+      .course-logo{max-width:14rem}
+      
+      .btn-cta{font-size:1.25rem;padding:1.125rem 2.5rem}
+      
+      .guarantee-badge{width:14rem}
+      
+      .module-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
+    }
+
+    /* Large Desktop (1200px+) */
+    @media(min-width:75rem){
+      :root{--max-width:1400px}
+      
+      h1{font-size:3rem}
+      h2{font-size:2.25rem}
+      
+      section{padding:5rem 0}
+      
+      .container{max-width:1400px}
+    }
+  </style>
+</head>
+<body>
+<a class="sr-only" href="#main">דלג לתוכן</a>
+
+<main id="main">
+
+  <!-- HERO -->
+  <header class="hero band band--dark">
+    <div class="container">
+      <div class="pill">קורס דיגיטלי ממוקד, המלמד שלב־אחר־שלב איך לשלוט בקיק ובבס שלכם – בלי ניחושים, בלי בלבול, ובלי ציוד יקר</div>
+
+      <h1>החלום הוא שהטראקים שלכם <span class="hl-marker">״יעיפו״ את הרחבה</span>? הוצאתם לא מעט כסף על ציוד אולפן ואקוסטיקה, מנסים ללמוד מחברים וסרטוני&nbsp;יו-טיוב, <span class="hl-underline">וזה עדיין לא קורה?</span></h1>
+
+      <div class="logo-row">
+        <img src="https://i.postimg.cc/G3yVrkVc/Design-A-smaller-color-version-1-Clean-no-backround-tiny.png" alt="Kick & Bass Factory" class="course-logo">
+      </div>
+
+      <div class="video-row">
+        <div class="video-embed">
+          <iframe src="https://player.vimeo.com/video/1149304160?title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn btn-gold btn-cta" href="#buy">כן — אני רוצה שיטה ברורה לקיק ובס</a>
+        <a class="btn btn-ghost" href="#toc">תראה לי מה בפנים</a>
+      </div>
+
+      <div class="micro">✅ גישה מיידית · ✅ לכל החיים · ✅ 60 שיעורים קצרים · ✅ צ'ק־ליסטים + כלים חינמיים</div>
+
+      <div class="callout" style="text-align:center">
+        מה בעצם הבעיה האמיתית? <strong>רוב המפיקים לא יודעים מה לחפש</strong> — לא באוזן ולא במדידה. וכשאין סדר עבודה ברור — שינוי קטן יוצר תגובת שרשרת שמפרקת את כל הסאונד.
+      </div>
+    </div>
+  </header>
+
+  <!-- ✨ NEW: COUNTDOWN TIMER -->
+  <section class="band" style="background:linear-gradient(135deg,#f5c400,#e6b800);padding:1.5rem 0;border-bottom:2px solid #d4a900">
+    <div class="container">
+      <div style="text-align:center;color:#000">
+        <div style="font-size:1.125rem;font-weight:700;margin-bottom:0.75rem">
+          ⚠️ מחיר מיוחד לחודש ינואר - 600 ₪ במקום 997 ₪
+        </div>
+        <div style="font-size:0.9375rem;font-weight:500;margin-bottom:1rem">
+          ההטבה בתוקף עד 31/1/2026 · נשאר:
+        </div>
+        <div style="display:flex;gap:1rem;justify-content:center;align-items:center;flex-wrap:wrap">
+          <div style="background:rgba(0,0,0,.85);color:#f5c400;padding:0.75rem 1rem;border-radius:0.5rem;min-width:4.5rem">
+            <div id="countdown-seconds" style="font-size:2rem;font-weight:700;line-height:1">00</div>
+            <div style="font-size:0.75rem;margin-top:0.25rem">שניות</div>
+          </div>
+          <div style="font-size:1.5rem;font-weight:700;color:#000">:</div>
+          <div style="background:rgba(0,0,0,.85);color:#f5c400;padding:0.75rem 1rem;border-radius:0.5rem;min-width:4.5rem">
+            <div id="countdown-minutes" style="font-size:2rem;font-weight:700;line-height:1">00</div>
+            <div style="font-size:0.75rem;margin-top:0.25rem">דקות</div>
+          </div>
+          <div style="font-size:1.5rem;font-weight:700;color:#000">:</div>
+          <div style="background:rgba(0,0,0,.85);color:#f5c400;padding:0.75rem 1rem;border-radius:0.5rem;min-width:4.5rem">
+            <div id="countdown-hours" style="font-size:2rem;font-weight:700;line-height:1">00</div>
+            <div style="font-size:0.75rem;margin-top:0.25rem">שעות</div>
+          </div>
+          <div style="font-size:1.5rem;font-weight:700;color:#000">:</div>
+          <div style="background:rgba(0,0,0,.85);color:#f5c400;padding:0.75rem 1rem;border-radius:0.5rem;min-width:4.5rem">
+            <div id="countdown-days" style="font-size:2rem;font-weight:700;line-height:1">00</div>
+            <div style="font-size:0.75rem;margin-top:0.25rem">ימים</div>
+          </div>
+        </div>
+        <div style="margin-top:1rem;font-size:0.875rem;font-weight:500">
+          💎 חיסכון של 397 ₪ - רק בחודש ינואר
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1) PROBLEM -->
+  <section id="problem" class="band band--dark">
+    <div class="container">
+      <h2>כשזה לא יושב בקיק ובבס — שום דבר לא באמת עובד</h2>
+      <p class="subp">אתם יוצרים טראק, יושבים עליו שעות, משקיעים במלודיה, במיקס, באווירה — אבל כששומעים אותו באוטו, במועדון או באוזניות טובות… משהו שם לא מחזיק.</p>
+
+      <p class="subp">והכי מתסכל... לא תמיד ברורה הבעיה — ואיך בכלל מתחילים לפתור אותה.</p>
+
+      <div class="grid">
+        <div class="box">
+          <h3>למה זה קורה</h3>
+          <ul class="list">
+            <li>מידע סותר ביוטיוב/קורסים<span class="muted">במקום סדר, עוד יותר בלגן</span></li>
+            <li>ניסויים אינסופיים<span class="muted">מחליף קיק, משנה EQ, עושה Sidechain… ועדיין לא עקבי</span></li>
+            <li>חוסר עקביות בין מערכות שמע<span class="muted">טוב בבית, <span class="hl-underline">מתפרק במועדון</span>/באוטו</span></li>
+            <li>שיטות שלא תואמות לז'אנר<span class="muted">מה שעובד בטכנו לא תמיד עובד בטראנס</span></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>הטעויות הקלאסיות</h3>
+          <ul class="list">
+            <li>בחירה לא נכונה של דגימת הקיק<span class="muted">הקיק לא מתאים לז'אנר או לבס</span></li>
+            <li>שימוש לא נכון ב־Sidechain<span class="muted">חזק מדי או חלש מדי, הורס את הגרוב</span></li>
+            <li>באלאנס לא נכון בין הקיק לבס<span class="muted">אחד מכסה את השני או שניהם נעלמים</span></li>
+            <li>הקיק והבס חזקים או חלשים מדי<span class="muted">לא מאוזנים לעומת שאר הערוצים בטראק</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">הבעיה האמיתית? שרוב המפיקים <strong>לא יודעים מה לחפש</strong> — לא באוזן ולא במדידה. וכשאין סדר עבודה ברור — שינוי קטן יוצר תגובת שרשרת שמפרקת את כל הסאונד.</div>
+    </div>
+  </section>
+
+  <!-- 2) SOLUTION -->
+  <section id="solution" class="band">
+    <div class="container">
+      <h2>הפתרון: סוף סוף שיטה אחת ברורה, מסודרת ומדויקת — <span class="hl-marker">שגם עובדת!</span></h2>
+      <p class="subp">Kick & Bass Factory הוא לא עוד קורס "שמע מה עשיתי כאן". זהו קורס מקצועי, שיטתי ומבוסס-מתודולוגיה פשוטה — שמלמד אתכם צעד-אחר-צעד איך לשלוט בקיק ובבס ברמת סאונד מסחרית.</p>
+
+      <div class="grid">
+        <div class="box">
+          <h3>צ'ק־ליסטים ברורים</h3>
+          <p class="box-text">בחירה → עיצוב → עיבוד → התאמה לבס → שילוב במיקס. <span class="hl-bold">פשוט ובלי בלבול/התלבטויות או ניחושים</span>.</p>
+        </div>
+        <div class="box">
+          <h3>גישה אנליטית ומדידה</h3>
+          <p class="box-text">Spectrum Analyzer, Oscilloscope, VU Meter ועוד — <span class="hl-underline">לראות את מה שאתם שומעים</span>.</p>
+        </div>
+        <div class="box">
+          <h3>כלים חינמיים ונגישים</h3>
+          <p class="box-text">100% מהקורס ניתן ליישום בלי ציוד יקר. תקבלו גם תקיית הורדות ורשימת פלאגינים חינמיים.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3) WHAT YOU'LL DO AFTER -->
+  <section class="band">
+    <div class="container">
+      <h2>מה תדעו לעשות <span class="hl-underline">אחרי הקורס</span>?</h2>
+      <p class="subp">בסיום Kick & Bass Factory תהיה לכם שליטה מלאה על התחום הכי קריטי במיקס אלקטרוני — הקיק והבס. בעקבות הקורס תדעו:</p>
+
+      <div class="box">
+        <ul class="list">
+          <li>לבחור קיקים ודגימות <span class="hl-bold">בצורה שיטתית</span> — בלי לנחש</li>
+          <li>לבנות ולעצב קיק מאפס: מעטפות, תדרים, סטריאו, דינמיקה</li>
+          <li>לסנתז קיק מקצועי או לדגום מטראקים קיימים</li>
+          <li>להפיק בס נקי ומאוזן: Sub / Mid / Top + פאזה</li>
+          <li>לשלב קיק ובס כך ש<span class="hl-marker">יעבודו בכל מערכת</span> (אולפן→מועדון)</li>
+          <li>להשתמש נכון באנליזרים — "לראות את מה שאתם שומעים"</li>
+          <li>איך לעשות Sidechain בצורה נכונה</li>
+          <li>באלאנס נכון של הקיק והבס</li>
+          <li>באלאנס נכון של הלידים והתדרים הגבוהים ביחס לקיק (Kick Anchoring)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4) TESTIMONIALS -->
+  <section id="testimonials" class="band band--dark">
+    <div class="container">
+      <h2>מה אומרים בוגרי הקורס?</h2>
+
+      <div class="scroller">
+        <div class="tcard">
+          <p class="tquote">"הקורס מועבר בצורה ברורה, הזמינות שלך מעולה, והגישה <span class="hl-marker">שונה מכל מה שהכרתי</span>. שינה לי את כל הדרך שאני מסתכל על קיק ובס. פשוט מומלץ!"</p>
+          <div class="tmeta">
+            <img src="https://i.postimg.cc/4dQd0gWC/Oz-Zigron.jpg" alt="עוז זיגרון" class="tmeta-img" loading="lazy">
+            <span>— עוז זיגרון</span>
+          </div>
+        </div>
+        <div class="tcard">
+          <p class="tquote">"כל מה שלמדתי פשוט נטמע בי — ואני מיישם את זה בלי לחשוב. דברים שנראו מסובכים, נהיו פשוטים. מרגיש ש<span class="hl-bold">אני שולט בקיק ובבס לגמרי</span>. תודה!"</p>
+          <div class="tmeta">
+            <img src="https://i.postimg.cc/FzxL0SMq/Bar-Rot.jpg" alt="בר רוט" class="tmeta-img" loading="lazy">
+            <span>— בר רוט</span>
+          </div>
+        </div>
+        <div class="tcard">
+          <p class="tquote">"הסאונד שלי קפץ כמה רמות. <span class="hl-marker">לימיטר בורגר זה המאכל החדש שלי</span>. סוף סוף אני יודע מה לחפש כשיש בעיה במיקס. תודה!"</p>
+          <div class="tmeta">
+            <img src="https://i.postimg.cc/02BNFZ0H/Menash-elsa.jpg" alt="מנשה אלסה" class="tmeta-img" loading="lazy">
+            <span>— מנשה אלסה</span>
+          </div>
+        </div>
+        <div class="tcard">
+          <p class="tquote">"האמת עברתי על כל המודול הראשון וזה מהמם, כבר שיפר אותי מאוד כבר המלצתי לחברים תודה <span class="hl-marker">תסריט פגז</span> עוד לא סיימתי אבל עד כה עף על זה"</p>
+          <div class="tmeta">
+            <img src="https://i.postimg.cc/VNRPQkcQ/T-Puse.jpg" alt="עומר גני" class="tmeta-img" loading="lazy">
+            <span>— עומר גני</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ✨ NEW: CTA AFTER TESTIMONIALS -->
+      <div style="text-align:center;margin:3rem 0 1rem;padding:2rem 1rem;background:rgba(0,180,216,.1);border-radius:0.5rem">
+        <h3 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin-bottom:1rem">
+          מוכנים להצטרף לתלמידים שכבר משיגים תוצאות?
+        </h3>
+        <p style="color:rgba(255,255,255,.9);margin-bottom:1.5rem;font-size:1rem">
+          גישה מיידית לכל השיעורים + הבונוסים + תמיכה למשך 3 חודשים
+        </p>
+        <a class="btn btn-gold btn-cta" href="#buy">כן, אני רוצה להתחיל עכשיו →</a>
+        <div style="margin-top:1rem;font-size:0.875rem;color:rgba(255,255,255,.85)">
+          💳 תשלום מאובטח · 🔒 אחריות 14 יום להחזר מלא
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5) WHO AM I -->
+  <section class="band">
+    <div class="container">
+      <h2>מי אני — ומה הבשורה שאני מציע?</h2>
+      <div class="box">
+        <p class="box-text">אני איל צור, מוזיקאי, מפיק, טכנאי מיקס ומאסטרינג — עם ניסיון של <span class="hl-marker">יותר מ־20 שנה</span> בכל צד אפשרי של תעשיית המוזיקה.</p>
+
+        <p class="box-text">התחלתי בגיל 8 כפסנתרן קלאסי, המשכתי לרוק, ונשאבתי לעולם האלקטרוני. הייתי מהמקימים של Exaile, ובהמשך הקמתי את Pangea ועבדתי עם אמנים מובילים.</p>
+
+        <p class="box-text">הופעתי בעולם ושחררתי מוזיקה בלייבלים בינלאומיים כמו Sony, Revealed, Warner Music Group, Alteza, Diynamic ואחרים. במקביל — לימדתי סאונד במסגרות מקצועיות וממשיך ללמד עד היום.</p>
+
+        <div class="sep"></div>
+
+        <p class="box-text">השקעתי אלפי שעות בפיצוח שיטות סאונד, במיוחד בקיק ובס — ובניתי שיטה שיטתית, מקצועית, מדויקת — שמביאה תוצאות בכל הפקה.</p>
+      </div>
+
+      <div class="box">
+        <h3>לייבלים שעבדתי איתם</h3>
+        <div class="hscroll-wrap"><div class="hscroll">
+          <div class="label-card"><img src="https://i.imghippo.com/files/Oulv9795GcQ.jpg" alt="לייבל 1" loading="lazy"></div>
+          <div class="label-card"><img src="https://i.imghippo.com/files/fDtd9267bws.png" alt="לייבל 2" loading="lazy"></div>
+          <div class="label-card"><img src="https://i.imghippo.com/files/tEYu8583xj.jpg" alt="לייבל 3" loading="lazy"></div>
+          <div class="label-card"><img src="https://i.imghippo.com/files/Cktn2830L.png" alt="לייבל 4" loading="lazy"></div>
+          <div class="label-card"><img src="https://i.imghippo.com/files/cuR1030azA.png" alt="לייבל 5" loading="lazy"></div>
+          <div class="label-card"><img src="https://i.imghippo.com/files/wmRz7582z.png" alt="לייבל 6" loading="lazy"></div>
+        </div></div>
+        <div class="scroll-hint">← גרור כדי לראות עוד →</div>
+      </div>
+
+      <div class="box">
+        <h3>אמנים שעבדתי איתם</h3>
+        <div class="hscroll-wrap"><div class="hscroll">
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/cqWX9907lMw.png" alt="אמן" loading="lazy"></div></div>
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/hvf9265iWw.png" alt="אמן" loading="lazy"></div></div>
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/XmOo8288NeU.png" alt="אמן" loading="lazy"></div></div>
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/xke3329Bk.png" alt="אמן" loading="lazy"></div></div>
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/Iq9128lI.png" alt="אמן" loading="lazy"></div></div>
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/dDrI5231Hbk.png" alt="אמן" loading="lazy"></div></div>
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/heni1480niU.png" alt="אמן" loading="lazy"></div></div>
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/Ex5875oI.png" alt="אמן" loading="lazy"></div></div>
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/xdOv3489fb.png" alt="אמן" loading="lazy"></div></div>
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/ZMCi4673OiQ.png" alt="אמן" loading="lazy"></div></div>
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/oS8201Vtk.png" alt="אמן" loading="lazy"></div></div>
+          <div class="artist-card"><div class="img"><img src="https://i.imghippo.com/files/EwQ5015yA.png" alt="אמן" loading="lazy"></div></div>
+        </div></div>
+        <div class="scroll-hint">← גרור כדי לראות את כל האמנים →</div>
+      </div>
+
+      <!-- ✨ NEW: CTA AFTER WHO AM I -->
+      <div style="text-align:center;margin:3rem 0 0;padding:2rem 1.5rem;background:#f5f5f7;border-radius:0.5rem;border:2px solid #00B4D8">
+        <h3 style="font-size:1.375rem;font-weight:700;color:#000;margin-bottom:0.75rem">
+          עכשיו כשאתם יודעים מי אני 👆
+        </h3>
+        <p style="color:#444;margin-bottom:1.5rem;font-size:1rem;line-height:1.6">
+          השאלה היא: <strong>האם אתם מוכנים לקחת את הסאונד שלכם לרמה הבאה?</strong><br>
+          20 שנות ניסיון, מאות טראקים, עשרות תלמידים מרוצים — <span style="background:linear-gradient(180deg,transparent 60%,rgba(245,196,0,.4) 60%);padding:0 0.25rem">השיטה הזאת עובדת</span>.
+        </p>
+        <a class="btn btn-primary btn-cta" href="#buy">כן, אני רוצה ללמוד מאיל →</a>
+        <div style="margin-top:1rem;font-size:0.875rem;color:#666">
+          ⏰ מחיר מיוחד: 600 ₪ (חוזר ל-997 ₪ בקרוב)
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6) TOC - NEW MODULE CARDS -->
+  <section id="toc" class="band band--alt">
+    <div class="container">
+      <h2 style="text-align:center">מה בדיוק תקבלו בתוך הקורס?</h2>
+      <p class="subp" style="text-align:center">60 שיעורי וידאו מקצועיים | 7 שעות ו-24 דקות | 5 מודולים מסודרים</p>
+
+      <div class="module-grid">
+        <!-- מבוא -->
+        <div class="module-card">
+          <div class="module-number">0</div>
+          <h3 class="module-title">מבוא</h3>
+          <div class="module-meta">
+            <span>📹 4 שיעורים</span>
+            <span>⏱️ 12 דקות</span>
+          </div>
+        </div>
+
+        <!-- מודול 1 -->
+        <div class="module-card">
+          <div class="module-number">1</div>
+          <h3 class="module-title">הצ'ק ליסט של הקיק</h3>
+          <div class="module-meta">
+            <span>📹 11 שיעורים</span>
+            <span>⏱️ 1:04 שעות</span>
+          </div>
+        </div>
+
+        <!-- מודול 2 -->
+        <div class="module-card">
+          <div class="module-number">2</div>
+          <h3 class="module-title">עיצוב ועיבוד הקיק</h3>
+          <div class="module-meta">
+            <span>📹 23 שיעורים</span>
+            <span>⏱️ 2:40 שעות</span>
+          </div>
+        </div>
+
+        <!-- מודול 3 -->
+        <div class="module-card">
+          <div class="module-number">3</div>
+          <h3 class="module-title">הבס: צ'ק ליסט ועיבוד</h3>
+          <div class="module-meta">
+            <span>📹 14 שיעורים</span>
+            <span>⏱️ 2:14 שעות</span>
+          </div>
+        </div>
+
+        <!-- מודול 4 -->
+        <div class="module-card">
+          <div class="module-number">4</div>
+          <h3 class="module-title">שילוב במיקס: קיק, בס ולידים</h3>
+          <div class="module-meta">
+            <span>📹 8 שיעורים</span>
+            <span>⏱️ 1:12 שעות</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Actions -->
+      <div style="display:flex;flex-direction:column;gap:1rem;align-items:center;margin-top:2.5rem">
+        <button class="btn btn-primary btn-cta" onclick="document.getElementById('syllabusModal').classList.add('active')" style="cursor:pointer">
+          📋 צפו בסילבוס המלא
+        </button>
+        <a class="btn btn-ghost" href="https://vimeo.com/1106087318/a546ea7a79" target="_blank" style="min-width:20rem">
+          🎬 צפו בשיעור לדוגמה בחינם
+        </a>
+      </div>
+
+      <p style="text-align:center;margin-top:2rem;color:#666;font-size:0.9375rem">
+        ממוצע 7.5 דקות לשיעור · גישה מיידית · לכל החיים
+      </p>
+    </div>
+  </section>
+
+  <!-- ✨ VIDEO TESTIMONIALS (moved here from testimonials section) -->
+  <section class="band band--dark">
+    <div class="container">
+      <h3 style="text-align:center;margin:0 0 0.75rem">עדויות וידאו של תלמידים</h3>
+      <p class="subp" style="text-align:center">4 עדויות קצרות — כדי לראות את התהליך ואת הביטחון בעיניים.</p>
+
+      <div class="video-grid">
+        <!-- גיא ארגמן -->
+        <div class="video-card">
+          <div class="video-embed portrait" style="position:relative;background:#000">
+            <img src="https://i.postimg.cc/BQh9B9L0/Guy_Argeman.jpg" alt="גיא ארגמן" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:1" class="video-poster">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:4rem;height:4rem;background:rgba(0,180,216,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" class="play-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <iframe src="https://player.vimeo.com/video/1143355978?title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" style="position:relative;z-index:3;display:none"></iframe>
+          </div>
+          <p style="text-align:center;margin-top:0.5rem;font-weight:600;color:#fff">גיא ארגמן</p>
+        </div>
+        
+        <!-- מידן אלון -->
+        <div class="video-card">
+          <div class="video-embed portrait" style="position:relative;background:#000">
+            <img src="https://i.postimg.cc/J4TV5VDR/Meydan.jpg" alt="מידן אלון" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:1" class="video-poster">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:4rem;height:4rem;background:rgba(0,180,216,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" class="play-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <iframe src="https://player.vimeo.com/video/1143356050?title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" style="position:relative;z-index:3;display:none"></iframe>
+          </div>
+          <p style="text-align:center;margin-top:0.5rem;font-weight:600;color:#fff">מידן אלון</p>
+        </div>
+        
+        <!-- ערן מורדי -->
+        <div class="video-card">
+          <div class="video-embed portrait" style="position:relative;background:#000">
+            <img src="https://i.postimg.cc/dtWPjPkF/Eran_Moradi.jpg" alt="ערן מורדי" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:1" class="video-poster">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:4rem;height:4rem;background:rgba(0,180,216,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" class="play-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <iframe src="https://player.vimeo.com/video/1149296072?title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" style="position:relative;z-index:3;display:none"></iframe>
+          </div>
+          <p style="text-align:center;margin-top:0.5rem;font-weight:600;color:#fff">ערן מורדי</p>
+        </div>
+        
+        <!-- שי קוגן -->
+        <div class="video-card">
+          <div class="video-embed portrait" style="position:relative;background:#000">
+            <img src="https://i.postimg.cc/hPCW1Wzc/Kogan.jpg" alt="שי קוגן" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:1" class="video-poster">
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:4rem;height:4rem;background:rgba(0,180,216,0.9);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer" class="play-overlay">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <iframe src="https://player.vimeo.com/video/1143356013?title=0&byline=0&portrait=0&dnt=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" style="position:relative;z-index:3;display:none"></iframe>
+          </div>
+          <p style="text-align:center;margin-top:0.5rem;font-weight:600;color:#fff">שי קוגן</p>
+        </div>
+      </div>
+
+      <!-- CTA AFTER VIDEO TESTIMONIALS -->
+      <div style="text-align:center;margin:3rem 0 0;padding:2rem 1rem;background:rgba(0,180,216,.1);border-radius:0.5rem">
+        <h3 style="font-size:1.5rem;font-weight:700;color:#ffffff;margin-bottom:1rem">
+          מוכנים להצטרף לתלמידים שכבר משיגים תוצאות?
+        </h3>
+        <p style="color:rgba(255,255,255,.9);margin-bottom:1.5rem;font-size:1rem">
+          גישה מיידית לכל השיעורים + הבונוסים + תמיכה למשך 3 חודשים
+        </p>
+        <a class="btn btn-gold btn-cta" href="#buy">כן, אני רוצה להתחיל עכשיו →</a>
+        <div style="margin-top:1rem;font-size:0.875rem;color:rgba(255,255,255,.85)">
+          💳 תשלום מאובטח · 🔒 אחריות 14 יום להחזר מלא
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7) BONUSES -->
+  <section id="bonuses" class="band band--dark">
+    <div class="container">
+      <h2>הבונוסים שלכם — <span class="hl-marker">שווי עצום</span>, כלול במחיר</h2>
+      <p class="subp">כדי לוודא שיש לכם כל מה שאתם צריכים להפקת קיק ובס מקצועיים — תקבלו חבילת בונוסים סופר־עשירה.</p>
+
+      <div class="grid">
+        <div class="box bonus-card">
+          <h3>Kick & Bass Factory Essentials</h3>
+          <p>בנק פריסטים לבאסים ל־Vital + בנק דגימות קיקים לסגנונות שונים — מותאם לשיטה.</p>
+        </div>
+        <div class="box bonus-card">
+          <h3>הצ'אטבוט "מורה לסאונד"</h3>
+          <p>מסביר מונחים ומושגים בסאונד/מיקס/תיאוריה — מבוסס ספרות מקצועית.</p>
+        </div>
+        <div class="box bonus-card">
+          <h3>כלי עזר מדויקים</h3>
+          <p>מחשבונים בעברית (תדר↔זמן↔סמפלים, תדר↔סמיטונים) + טבלת תווים והרמוניות.</p>
+        </div>
+        <div class="box bonus-card">
+          <h3>רשימת פלאגינים חינמיים</h3>
+          <p>עשרות פלאגינים איכותיים שנבדקו ונמצאים בשימוש יומיומי.</p>
+        </div>
+        <div class="box bonus-card">
+          <h3>פלייליסט Spotify לרפרנס</h3>
+          <p>פלייליסט מתעדכן לרפרנסים של קיק ובס בז'אנרים שונים — לאימון אוזן.</p>
+        </div>
+        <div class="box bonus-card">
+          <h3>תמיכה מקצועית</h3>
+          <p>קבוצת WhatsApp לעדכונים + מענה אישי במייל למשך <span class="hl-bold">3 חודשים</span>.</p>
+        </div>
+      </div>
+
+      <div class="callout">גם אם אתם פחות בקטע של תיאוריה — אתם יכולים פשוט לעבוד לפי הצ'ק־ליסטים, <strong>שלב־אחר־שלב</strong>, ולהגיע לתוצאה מקצועית בעקביות.</div>
+    </div>
+  </section>
+
+  <!-- 8) PRICE/VALUE SECTION -->
+  <section class="band band--alt">
+    <div class="container">
+      <h2>כמה עולה כל הטוב הזה?</h2>
+      <p class="subp">מחיר הקורס 600 ₪ בלבד הניתנים לחלוקה עד <strong>3 תשלומים</strong>. בקורס, שיעמוד לרשותכם לכל החיים, תרכשו ידע מלא בשיטה אחת פשוטה ומוכחת, בתוספת קבצים נלווים, חבילת בונוסים, מערך תמיכה ובעיקר - <span class="hl-marker">שקט וביטחון</span>.</p>
+
+      <div class="grid">
+        <div class="box">
+          <h3 style="position:relative">
+            מה כלול במחיר
+            <img src="https://i.postimg.cc/jSCsbRw3/Design-A-smaller-no-backround.png" alt="Kick & Bass Factory" style="position:absolute;top:-10px;left:0;width:80px;height:auto">
+          </h3>
+          <ul class="list">
+            <li>60 שיעורים מוקלטים, מעל 7 שעות של מידע ברור ומקיף, שיביאו אתכם לרמות ביצוע מקצועיות בקלות</li>
+            <li>גישה ללא הגבלה, לכל החיים</li>
+            <li>צ'ק־ליסטים לקיק/בס/שילוב/לידים</li>
+            <li>בונוסים מלאים + תקיית פלאגינים</li>
+            <li>תמיכה במייל ל-3 חודשים + קבוצת WhatsApp לעדכונים</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>לעומת האלטרנטיבות</h3>
+          <ul class="list">
+            <li>שיעורים פרטיים: 350 ₪ לשעה × 7 שעות = <span class="hl-underline">2,450 ₪+</span></li>
+            <li>קורס בית־ספר: 6,000–12,000 ₪ (ולרוב בלי מיקוד בלואו)</li>
+            <li>חודשים של ניסוי־וטעייה + "קניות תקווה" של פלאגינים</li>
+            <li>עלות אמיתית: זמן + תסכול + טראקים שלא יוצאים</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box" style="display:flex;flex-direction:column;gap:1rem;align-items:center;text-align:center;margin-top:1.5rem">
+        <div>
+          <div style="font-weight:700;font-size:1.25rem;margin-bottom:0.25rem">רוצה להצטרף עכשיו?</div>
+          <p class="box-text" style="margin:0">גישה מיידית לכל השיעורים + הבונוסים</p>
+        </div>
+        <a class="btn btn-primary btn-cta" id="checkoutBtnMid" href="https://my.schooler.biz/s/99048/user/signup?bundle=95141" target="_blank">להרשמה עכשיו</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9) OFFER -->
+  <div id="buy"></div>
+  <section class="band--alt" style="padding:2.5rem 0">
+    <div class="container">
+      <div class="offer">
+        <a class="btn btn-primary btn-cta" id="checkoutBtnTop" href="https://my.schooler.biz/s/99048/user/signup?bundle=95141" target="_blank" style="margin-bottom:1.25rem">להרשמה עכשיו</a>
+        <div class="price-title">מחיר הקורס</div>
+        <div class="price">600 ₪</div>
+        <div class="paynote">ניתן לחלק עד 3 תשלומים (200 ₪ × 3) · אחריות מלאה</div>
+        <ul class="bullets">
+          <li><span class="check">✓</span> 60 שיעורים מוקלטים · 7:24 שעות</li>
+          <li><span class="check">✓</span> צ'ק־ליסטים סופר מדויקים לקיק/בס/שילוב</li>
+          <li><span class="check">✓</span> בונוסים: פריסטים + סמפלים + מחשבונים + "מורה לסאונד"</li>
+          <li><span class="check">✓</span> תמיכה במייל ל-3 חודשים + קבוצת WhatsApp לעדכונים</li>
+          <li><span class="check">✓</span> כלים חינמיים — בלי ציוד יקר</li>
+        </ul>
+        <div class="sep"></div>
+        <a class="btn btn-gold" href="#faq">יש לך שאלות? קפוץ ל־FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10) GUARANTEE -->
+  <section class="band">
+    <div class="container">
+      <h2><span class="hl-marker">כל הסיכון</span> עליי</h2>
+      <p class="subp">האמון שלי בתהליך מוחלט: אם זה לא עובד עבורכם — הכסף יוחזר לכם במלואו – בהתחייבות וללא אותיות קטנות.</p>
+
+      <div class="guarantee-section">
+        <div class="guarantee-row">
+          <img src="https://i.postimg.cc/hP96yKq7/14-days-money-back-guarantee-no-backround.png" alt="14 Day Money Back Guarantee" class="guarantee-badge" loading="lazy">
+        </div>
+        <h3 class="guarantee-title">אחריות מלאה ל־14 יום</h3>
+        <p class="guarantee-text">אם תצפו בקורס, תיישמו את הצ'ק־ליסטים, תעבדו לפי ההנחיות — ועדיין תרגישו שלא התקדמתם, שלחו מייל תוך 14 יום מרגע ההרשמה ותקבלו החזר מלא.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11) FAQ -->
+  <section id="faq" class="band band--dark">
+    <div class="container">
+      <h2 style="text-align:center">נותרתם עם שאלות? הנה התשובות שיעשו לכם סדר</h2>
+
+      <div class="faq">
+        <details>
+          <summary>הקורס מתאים לי גם אם אני עובד ב־FL / Logic / Cubase / אחרת?</summary>
+          <p>כן. הקורס מתאים לכל תוכנה — ההסברים אוניברסליים: אנליזר, EQ, קומפרסור, אוסילוסקופ, תדרים. כל עוד אתם שולטים ב־DAW, תוכלו ליישם.</p>
+</details>
+
+        <details>
+          <summary>יש לי כבר ניסיון — זה לא בסיסי מדי?</summary>
+          <p>ממש לא. הקורס נבנה למפיקים שיש להם רקע וידע רב, אבל אין ביטחון אמיתי בלואו־אנד. בקורס תקבלו כלי מדידה, שיטה, צ'ק־ליסטים וטכניקות סדורות שעובדות שוב ושוב.</p>
+</details>
+
+        <details>
+          <summary>האם אזדקק לפלאגינים בתשלום או ציוד יקר?</summary>
+          <p>לא. 100% מהקורס אפשר לבצע עם פלאגינים חינמיים. במסגרת החבילה תקבלו גם רשימה מסודרת של פלאגינים מומלצים שנבדקו.</p>
+</details>
+
+        <details>
+          <summary>אני לא בטוח שאבין את כל המושגים — מה עושים?</summary>
+          <p>בדיוק בשביל זה יש חבילת הבונוסים שאחד מהם הוא "מורה לסאונד" — צ'אטבוט בעברית שמסביר מונחים וטכניקות, זאת בנוסף לקבוצת תמיכה במייל ל־3 חודשים.</p>
+</details>
+
+        <details>
+          <summary>אני לא חזק בסינתזה — זה בעיה?</summary>
+          <p>לא. החבילה כוללת בנק פריסטים מוכן לבאסים ל־Vital + דגימות קיקים, כדי שתוכלו להתמקד ביישום השיטה ולהגיע לתוצאות מצויינות בקלות ובמהירות.</p>
+</details>
+
+        <details>
+          <summary>כמה זמן לוקח לסיים את הקורס?</summary>
+          <p>הכל תלוי בקצב הלמידה שלכם. הקורס בנוי ממעל 7 שעות וידאו שמחולקות ל־60 שיעורים קצרים. אפשר ללמוד במרוכז תוך 2–3 ימים, או להתאים את הלמידה לקצב איטי יותר. בכל מקרה, הגישה לתכני הקורס היא לכל החיים.</p>
+</details>
+
+        <details>
+          <summary>מה קורה אם מתעוררות שאלות או נתקלתי בקשיים?</summary>
+          <p>לי ולכם יש את אותה מטרה – שתצליחו. על כן, החבילה כוללת ליווי ותמיכה באמצעות מענה במייל למשך 3 חודשים. כך אני מוודא שבכל שלב תוכלו לשאול, להתייעץ, להבטיח התקדמות תמידית בעזרת ליווי מקצועי צמוד.</p>
+</details>
+      </div>
+
+      <!-- ✨ SUPPORT BOX -->
+      <div style="margin-top:3rem;padding:2rem;background:#fff;border:2px solid #00B4D8;border-radius:0.5rem;text-align:center">
+        <h3 style="margin:0 0 1.5rem;font-size:1.25rem;color:#000">עוד שאלות?</h3>
+        <div style="display:flex;flex-direction:column;gap:1rem;align-items:center">
+          <a href="/cdn-cgi/l/email-protection#9ae9efeaeaf5e8eedaffeef7e9eeeffef3f5b4f9f5f7" style="display:inline-flex;align-items:center;gap:0.5rem;color:#000;text-decoration:none;font-weight:600;font-size:1rem">
+            ✉️ <span class="__cf_email__" data-cfemail="ccbfb9bcbca3beb88ca9b8a1bfb8b9a8a5a3e2afa3a1">[email&#160;protected]</span>
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=972523426051&text=היי איל, יש לי שאלה לגבי Kick & Bass Factory" target="_blank" style="display:inline-flex;align-items:center;gap:0.75rem;text-decoration:none;color:#000;font-weight:600;font-size:1rem">
+            <img src="https://i.imghippo.com/files/JfyO6204VYM.jpg" alt="WhatsApp" style="width:2rem;height:2rem;object-fit:contain">
+            <span>לחץ להודעה ב-WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div><strong>ETM Studio · Kick & Bass Factory</strong></div>
+      <div style="margin-top:0.5rem">© כל הזכויות שמורות</div>
+      <div style="margin-top:0.5rem;font-size:0.875rem;color:rgba(255,255,255,.8)">רכישת הקורס מיועדת לשימוש אישי בלבד. העברה, שיתוף או הפצת התכנים אסורים בהחלט.</div>
+      <div class="footer-links">
+        <a href="#faq">שאלות נפוצות</a>
+        <a href="#bonuses">בונוסים</a>
+        <a href="#toc">מה בפנים</a>
+        <a href="#buy">הצטרפות</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<!-- ✨ NEW: STICKY BAR WITH COUNTDOWN -->
+<div class="sticky">
+  <div class="row">
+    <div class="mini">
+      <div style="font-weight:700;margin-bottom:0.125rem">600 ₪ · 3 תשלומים</div>
+      <div style="font-size:0.75rem;color:#666">
+        נגמר בעוד: <span id="sticky-timer" style="color:#f5c400;font-weight:700">29:23:45:12</span>
+      </div>
+    </div>
+    <a class="btn btn-primary" id="checkoutBtnSticky" href="https://my.schooler.biz/s/99048/user/signup?bundle=95141" target="_blank">להצטרפות</a>
+  </div>
+</div>
+
+<!-- ✨ NEW: SYLLABUS MODAL -->
+<div id="syllabusModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button class="modal-close" onclick="document.getElementById('syllabusModal').classList.remove('active')">&times;</button>
+      <h2>📋 הסילבוס המלא - Kick & Bass Factory</h2>
+    </div>
+    <div class="modal-body">
+      
+      <!-- מבוא -->
+      <div class="syllabus-section">
+        <h3>🎯 מבוא</h3>
+        <ul class="syllabus-list">
+          <li><span class="lesson-name">ברוכים הבאים</span><span class="lesson-time">00:01:48</span></li>
+          <li><span class="lesson-name">לפני שמתחילים – הפלאגינים שנשתמש בהם</span><span class="lesson-time">00:04:37</span></li>
+          <li><span class="lesson-name">הכלים – VU Meter</span><span class="lesson-time">00:03:03</span></li>
+          <li><span class="lesson-name">הכלים – אוסילוסקופ</span><span class="lesson-time">00:02:39</span></li>
+        </ul>
+        <p style="text-align:left;color:#666;margin-top:0.5rem;font-size:0.875rem">סה"כ: 4 שיעורים | 00:12:07</p>
+      </div>
+
+      <!-- מודול 1 -->
+      <div class="syllabus-section">
+        <h3>🎧 מודול 1 – הצ'ק ליסט של הקיק</h3>
+        <ul class="syllabus-list">
+          <li><span class="lesson-name">האנטומיה של הקיק – איך מעטפות ווליום ופיץ' מעצבות את הסאונד</span><span class="lesson-time">00:05:07</span></li>
+          <li><span class="lesson-name">אילו תדרים יש בקיק? שיטה מדויקת לזיהוי וניתוח תדרים</span><span class="lesson-time">00:05:54</span></li>
+          <li><span class="lesson-name">אילו תדרים יש בקיק? – Ableton</span><span class="lesson-time">00:01:30</span></li>
+          <li><span class="lesson-name">שיטה מדויקת יותר לזיהוי התדרים – לפי סמפלים</span><span class="lesson-time">00:02:23</span></li>
+          <li><span class="lesson-name">שיטה מדויקת יותר לזיהוי התדרים – Audacity</span><span class="lesson-time">00:02:34</span></li>
+          <li><span class="lesson-name">אורך הקיק</span><span class="lesson-time">00:10:44</span></li>
+          <li><span class="lesson-name">4 רצועות התדרים של הקיק – חלק 1</span><span class="lesson-time">00:09:14</span></li>
+          <li><span class="lesson-name">4 רצועות התדרים של הקיק – חלק 2</span><span class="lesson-time">00:10:36</span></li>
+          <li><span class="lesson-name">הדינמיקה של הקיק</span><span class="lesson-time">00:08:59</span></li>
+          <li><span class="lesson-name">תמונת הסטריאו של הקיק</span><span class="lesson-time">00:04:14</span></li>
+          <li><span class="lesson-name">הצ'ק ליסט של הקיק – סיכום</span><span class="lesson-time">00:03:36</span></li>
+        </ul>
+        <p style="text-align:left;color:#666;margin-top:0.5rem;font-size:0.875rem">סה"כ: 11 שיעורים | 01:04:51</p>
+      </div>
+
+      <!-- מודול 2 -->
+      <div class="syllabus-section">
+        <h3>🎛️ מודול 2 – עיצוב ועיבוד הקיק</h3>
+        <ul class="syllabus-list">
+          <li><span class="lesson-name">עריכת הקיק</span><span class="lesson-time">00:03:22</span></li>
+          <li><span class="lesson-name">עריכת הקיק ב-Ableton</span><span class="lesson-time">00:03:05</span></li>
+          <li><span class="lesson-name">שינוי אורך הקיק</span><span class="lesson-time">00:07:58</span></li>
+          <li><span class="lesson-name">לימיטר-בורגר – שינוי מעטפת הווליום חלק 1</span><span class="lesson-time">00:11:27</span></li>
+          <li><span class="lesson-name">לימיטר-בורגר – שינוי מעטפת הווליום חלק 2</span><span class="lesson-time">00:16:42</span></li>
+          <li><span class="lesson-name">שינוי תדרי הסאב של הקיק בצורה מדויקת</span><span class="lesson-time">00:05:22</span></li>
+          <li><span class="lesson-name">הוספת טרנזיאנט לקיק</span><span class="lesson-time">00:03:31</span></li>
+          <li><span class="lesson-name">עיצוב תמונת הסטריאו של הקיק</span><span class="lesson-time">00:12:11</span></li>
+          <li><span class="lesson-name">שכבות בקיק – שימוש נכון בליירינג</span><span class="lesson-time">00:18:23</span></li>
+          <li><span class="lesson-name">כיצד לדגום קיק מטרק קיים – הקדמה</span><span class="lesson-time">00:03:13</span></li>
+          <li><span class="lesson-name">כיצד לדגום קיק – Audacity</span><span class="lesson-time">00:11:03</span></li>
+          <li><span class="lesson-name">כיצד לדגום קיק – Cubase Spectralayers</span><span class="lesson-time">00:05:26</span></li>
+          <li><span class="lesson-name">כיצד לדגום קיק – פיצול ל-4 רצועות תדרים</span><span class="lesson-time">00:06:54</span></li>
+          <li><span class="lesson-name">כיצד לדגום קיק – פילטר של Geonkick</span><span class="lesson-time">00:03:33</span></li>
+          <li><span class="lesson-name">כיצד לדגום קיק – Kick 3</span><span class="lesson-time">00:04:07</span></li>
+          <li><span class="lesson-name">כיצד לדגום קיק – שילוב השיטות</span><span class="lesson-time">00:02:39</span></li>
+          <li><span class="lesson-name">שימוש בסטורציה – הסבר והדגמה על +GSAT</span><span class="lesson-time">00:10:49</span></li>
+          <li><span class="lesson-name">שימוש בסטורציה – הדגמה על Black Box</span><span class="lesson-time">00:03:27</span></li>
+          <li><span class="lesson-name">כיצד לסנתז קיק – חלק 1</span><span class="lesson-time">00:06:20</span></li>
+          <li><span class="lesson-name">כיצד לסנתז קיק – חלק 2</span><span class="lesson-time">00:04:27</span></li>
+          <li><span class="lesson-name">כיצד לסנתז קיק – חלק 3</span><span class="lesson-time">00:02:00</span></li>
+          <li><span class="lesson-name">כיצד לסנתז קיק – חלק 4</span><span class="lesson-time">00:07:52</span></li>
+          <li><span class="lesson-name">כיצד לסנתז קיק – חלק 5</span><span class="lesson-time">00:06:31</span></li>
+        </ul>
+        <p style="text-align:left;color:#666;margin-top:0.5rem;font-size:0.875rem">סה"כ: 23 שיעורים | 02:40:22</p>
+      </div>
+
+      <!-- מודול 3 -->
+      <div class="syllabus-section">
+        <h3>🔊 מודול 3 – הבס: צ'ק ליסט ועיבוד</h3>
+        <ul class="syllabus-list">
+          <li><span class="lesson-name">רק סאב אחד!</span><span class="lesson-time">00:05:26</span></li>
+          <li><span class="lesson-name">טווח התווים ותדרי היסוד של הבס</span><span class="lesson-time">00:05:18</span></li>
+          <li><span class="lesson-name">משך הזמן תווי הבס</span><span class="lesson-time">00:03:50</span></li>
+          <li><span class="lesson-name">בחירת האוסילטורים: הרמוניות וצלילים עליונים</span><span class="lesson-time">00:08:30</span></li>
+          <li><span class="lesson-name">הפאזה של הבס</span><span class="lesson-time">00:17:47</span></li>
+          <li><span class="lesson-name">3 רצועות התדרים של הבס</span><span class="lesson-time">00:08:45</span></li>
+          <li><span class="lesson-name">פיצול הבס לרצועות התדרים</span><span class="lesson-time">00:08:28</span></li>
+          <li><span class="lesson-name">תמונת הסטריאו של הבס חלק 1</span><span class="lesson-time">00:11:28</span></li>
+          <li><span class="lesson-name">תמונת הסטריאו של הבס חלק 2</span><span class="lesson-time">00:12:27</span></li>
+          <li><span class="lesson-name">רינדור לאודיו</span><span class="lesson-time">00:08:58</span></li>
+          <li><span class="lesson-name">הדינמיקה של הבס חלק 1</span><span class="lesson-time">00:11:10</span></li>
+          <li><span class="lesson-name">הדינמיקה של הבס חלק 2</span><span class="lesson-time">00:11:14</span></li>
+          <li><span class="lesson-name">עיבוד הבס עם אקולייזר</span><span class="lesson-time">00:11:20</span></li>
+          <li><span class="lesson-name">עבודה נכונה עם תפקידי סאב</span><span class="lesson-time">00:10:14</span></li>
+        </ul>
+        <p style="text-align:left;color:#666;margin-top:0.5rem;font-size:0.875rem">סה"כ: 14 שיעורים | 02:14:55</p>
+      </div>
+
+      <!-- מודול 4 -->
+      <div class="syllabus-section">
+        <h3>🎚️ מודול 4 – שילוב הקיק, הבס והערוצים במיקס</h3>
+        <ul class="syllabus-list">
+          <li><span class="lesson-name">איזון בעזרת SpectrumAnalyzer</span><span class="lesson-time">00:06:31</span></li>
+          <li><span class="lesson-name">שילוב הקיק והבס והערוצים – הקדמה</span><span class="lesson-time">00:03:50</span></li>
+          <li><span class="lesson-name">שילוב הקיק והבס והערוצים – הכלים</span><span class="lesson-time">00:03:12</span></li>
+          <li><span class="lesson-name">שילוב הקיק והבס חלק 1</span><span class="lesson-time">00:12:01</span></li>
+          <li><span class="lesson-name">שילוב הקיק והבס חלק 2</span><span class="lesson-time">00:10:52</span></li>
+          <li><span class="lesson-name">שילוב הקיק והבס חלק 3</span><span class="lesson-time">00:10:13</span></li>
+          <li><span class="lesson-name">איזון הלידים ותדרים גבוהים חלק 1</span><span class="lesson-time">00:13:23</span></li>
+          <li><span class="lesson-name">איזון הלידים ותדרים גבוהים חלק 2</span><span class="lesson-time">00:12:02</span></li>
+        </ul>
+        <p style="text-align:left;color:#666;margin-top:0.5rem;font-size:0.875rem">סה"כ: 8 שיעורים | 01:12:04</p>
+      </div>
+
+      <!-- Summary -->
+      <div class="syllabus-summary">
+        <h4>📊 סיכום הקורס</h4>
+        <div class="summary-stats">
+          <div class="stat-item">
+            <span class="stat-number">60</span>
+            <span class="stat-label">שיעורי וידאו</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">7:24</span>
+            <span class="stat-label">שעות תוכן</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">~7.5</span>
+            <span class="stat-label">דקות לשיעור</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">גישה לכל החיים</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:2rem">
+        <a class="btn btn-primary btn-cta" href="#buy">רוצה להצטרף? לחץ כאן</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ✨ FIXED: COUNTDOWN + STICKY + VIDEO PLAY -->
+<script>
+(() => {
+  // ספירה לאחור עד 31 בינואר 2026 בשעה 23:59
+  const endDate = new Date(2026, 0, 31, 23, 59, 59).getTime();
+  const pad2 = (n) => String(Math.max(0, n)).padStart(2, '0');
+
+  const els = {
+    days: document.getElementById('countdown-days'),
+    hours: document.getElementById('countdown-hours'),
+    minutes: document.getElementById('countdown-minutes'),
+    seconds: document.getElementById('countdown-seconds'),
+    sticky: document.getElementById('sticky-timer'),
+  };
+
+  function render(d, h, m, s) {
+    if (els.days) els.days.textContent = pad2(d);
+    if (els.hours) els.hours.textContent = pad2(h);
+    if (els.minutes) els.minutes.textContent = pad2(m);
+    if (els.seconds) els.seconds.textContent = pad2(s);
+    if (els.sticky) els.sticky.textContent = `${pad2(d)}:${pad2(h)}:${pad2(m)}:${pad2(s)}`;
+  }
+
+  function tick() {
+    const now = Date.now();
+    let diff = endDate - now;
+    if (diff <= 0) {
+      render(0, 0, 0, 0);
+      return;
+    }
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    diff %= (1000 * 60 * 60 * 24);
+    const h = Math.floor(diff / (1000 * 60 * 60));
+    diff %= (1000 * 60 * 60);
+    const m = Math.floor(diff / (1000 * 60));
+    diff %= (1000 * 60);
+    const s = Math.floor(diff / 1000);
+    render(d, h, m, s);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+})();
+
+// VIDEO PLAY
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.video-card');
+  cards.forEach(card => {
+    const playOverlay = card.querySelector('.play-overlay');
+    const poster = card.querySelector('.video-poster');
+    const iframe = card.querySelector('iframe');
+    if (!playOverlay || !poster || !iframe) return;
+
+    const originalSrc = iframe.getAttribute('src') || '';
+    const start = () => {
+      poster.style.display = 'none';
+      playOverlay.style.display = 'none';
+      if (!originalSrc.includes('autoplay=1')) {
+        const glue = originalSrc.includes('?') ? '&' : '?';
+        iframe.setAttribute('src', originalSrc + glue + 'autoplay=1');
+      }
+      iframe.style.display = 'block';
+      iframe.style.position = 'absolute';
+      iframe.style.top = '0';
+      iframe.style.left = '0';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+    };
+    playOverlay.addEventListener('click', start);
+    poster.addEventListener('click', start);
+  });
+
+  // MODAL
+  const modal = document.getElementById('syllabusModal');
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.remove('active');
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') modal.classList.remove('active');
+    });
+  }
+});
+</script>
+
+</body>
+</html>
